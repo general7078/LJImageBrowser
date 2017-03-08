@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		849DB55A1E6823AA00FE8DA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB5591E6823AA00FE8DA4 /* main.m */; };
 		849DB55D1E6823AA00FE8DA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB55C1E6823AA00FE8DA4 /* AppDelegate.m */; };
-		849DB5601E6823AA00FE8DA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB55F1E6823AA00FE8DA4 /* ViewController.m */; };
 		849DB5631E6823AA00FE8DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849DB5611E6823AA00FE8DA4 /* Main.storyboard */; };
 		849DB5651E6823AA00FE8DA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849DB5641E6823AA00FE8DA4 /* Assets.xcassets */; };
 		849DB5681E6823AA00FE8DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849DB5661E6823AA00FE8DA4 /* LaunchScreen.storyboard */; };
 		849DB5731E6823AA00FE8DA4 /* LJImageViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB5721E6823AA00FE8DA4 /* LJImageViewerTests.m */; };
 		849DB57E1E6823AA00FE8DA4 /* LJImageViewerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB57D1E6823AA00FE8DA4 /* LJImageViewerUITests.m */; };
+		849DB5A41E6E558F00FE8DA4 /* ImageBrowserCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB5A31E6E558F00FE8DA4 /* ImageBrowserCollectionViewController.m */; };
+		849DB5AA1E6E969500FE8DA4 /* LJImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB5A91E6E969500FE8DA4 /* LJImageBrowserController.m */; };
+		849DB5AD1E6EC2A800FE8DA4 /* FullImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB5AC1E6EC2A800FE8DA4 /* FullImageCell.m */; };
+		849DB5B01E6EC6D400FE8DA4 /* ImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB5AF1E6EC6D400FE8DA4 /* ImageInfo.m */; };
+		849DB5B31E6EC98C00FE8DA4 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849DB5B21E6EC98C00FE8DA4 /* CollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,6 @@
 		849DB5591E6823AA00FE8DA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		849DB55B1E6823AA00FE8DA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		849DB55C1E6823AA00FE8DA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		849DB55E1E6823AA00FE8DA4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		849DB55F1E6823AA00FE8DA4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		849DB5621E6823AA00FE8DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849DB5641E6823AA00FE8DA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849DB5671E6823AA00FE8DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,16 @@
 		849DB5791E6823AA00FE8DA4 /* LJImageViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LJImageViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849DB57D1E6823AA00FE8DA4 /* LJImageViewerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJImageViewerUITests.m; sourceTree = "<group>"; };
 		849DB57F1E6823AA00FE8DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849DB5A21E6E558F00FE8DA4 /* ImageBrowserCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserCollectionViewController.h; sourceTree = "<group>"; };
+		849DB5A31E6E558F00FE8DA4 /* ImageBrowserCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserCollectionViewController.m; sourceTree = "<group>"; };
+		849DB5A81E6E969500FE8DA4 /* LJImageBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJImageBrowserController.h; path = ImageViewer/LJImageBrowserController.h; sourceTree = "<group>"; };
+		849DB5A91E6E969500FE8DA4 /* LJImageBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJImageBrowserController.m; path = ImageViewer/LJImageBrowserController.m; sourceTree = "<group>"; };
+		849DB5AB1E6EC2A800FE8DA4 /* FullImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FullImageCell.h; path = ImageViewer/FullImageCell.h; sourceTree = "<group>"; };
+		849DB5AC1E6EC2A800FE8DA4 /* FullImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FullImageCell.m; path = ImageViewer/FullImageCell.m; sourceTree = "<group>"; };
+		849DB5AE1E6EC6D400FE8DA4 /* ImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageInfo.h; path = ImageViewer/ImageInfo.h; sourceTree = "<group>"; };
+		849DB5AF1E6EC6D400FE8DA4 /* ImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageInfo.m; path = ImageViewer/ImageInfo.m; sourceTree = "<group>"; };
+		849DB5B11E6EC98C00FE8DA4 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		849DB5B21E6EC98C00FE8DA4 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +113,17 @@
 		849DB5571E6823AA00FE8DA4 /* LJImageViewer */ = {
 			isa = PBXGroup;
 			children = (
+				849DB5B11E6EC98C00FE8DA4 /* CollectionViewCell.h */,
+				849DB5B21E6EC98C00FE8DA4 /* CollectionViewCell.m */,
 				849DB55B1E6823AA00FE8DA4 /* AppDelegate.h */,
 				849DB55C1E6823AA00FE8DA4 /* AppDelegate.m */,
-				849DB55E1E6823AA00FE8DA4 /* ViewController.h */,
-				849DB55F1E6823AA00FE8DA4 /* ViewController.m */,
-				849DB5611E6823AA00FE8DA4 /* Main.storyboard */,
 				849DB5641E6823AA00FE8DA4 /* Assets.xcassets */,
-				849DB5661E6823AA00FE8DA4 /* LaunchScreen.storyboard */,
+				849DB5A21E6E558F00FE8DA4 /* ImageBrowserCollectionViewController.h */,
+				849DB5A31E6E558F00FE8DA4 /* ImageBrowserCollectionViewController.m */,
+				849DB58B1E6823BD00FE8DA4 /* ImageViewer */,
 				849DB5691E6823AA00FE8DA4 /* Info.plist */,
+				849DB5661E6823AA00FE8DA4 /* LaunchScreen.storyboard */,
+				849DB5611E6823AA00FE8DA4 /* Main.storyboard */,
 				849DB5581E6823AA00FE8DA4 /* Supporting Files */,
 			);
 			path = LJImageViewer;
@@ -138,6 +153,19 @@
 				849DB57F1E6823AA00FE8DA4 /* Info.plist */,
 			);
 			path = LJImageViewerUITests;
+			sourceTree = "<group>";
+		};
+		849DB58B1E6823BD00FE8DA4 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				849DB5A81E6E969500FE8DA4 /* LJImageBrowserController.h */,
+				849DB5A91E6E969500FE8DA4 /* LJImageBrowserController.m */,
+				849DB5AB1E6EC2A800FE8DA4 /* FullImageCell.h */,
+				849DB5AC1E6EC2A800FE8DA4 /* FullImageCell.m */,
+				849DB5AE1E6EC6D400FE8DA4 /* ImageInfo.h */,
+				849DB5AF1E6EC6D400FE8DA4 /* ImageInfo.m */,
+			);
+			name = ImageViewer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849DB5601E6823AA00FE8DA4 /* ViewController.m in Sources */,
+				849DB5B01E6EC6D400FE8DA4 /* ImageInfo.m in Sources */,
+				849DB5AA1E6E969500FE8DA4 /* LJImageBrowserController.m in Sources */,
+				849DB5A41E6E558F00FE8DA4 /* ImageBrowserCollectionViewController.m in Sources */,
+				849DB5AD1E6EC2A800FE8DA4 /* FullImageCell.m in Sources */,
 				849DB55D1E6823AA00FE8DA4 /* AppDelegate.m in Sources */,
+				849DB5B31E6EC98C00FE8DA4 /* CollectionViewCell.m in Sources */,
 				849DB55A1E6823AA00FE8DA4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +546,7 @@
 				849DB5841E6823AA00FE8DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		849DB5851E6823AA00FE8DA4 /* Build configuration list for PBXNativeTarget "LJImageViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +555,7 @@
 				849DB5871E6823AA00FE8DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		849DB5881E6823AA00FE8DA4 /* Build configuration list for PBXNativeTarget "LJImageViewerUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +564,7 @@
 				849DB58A1E6823AA00FE8DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
