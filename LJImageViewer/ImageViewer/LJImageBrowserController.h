@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageInfo.h"
+@class LJImageBrowserController;
+@protocol LJImageBrowserDataSource <NSObject>
+-(NSInteger) numberOfSectionsInBrowser:(LJImageBrowserController*)controller;
+-(NSInteger) imageBrower:(LJImageBrowserController*) imageBrowser numberOfImagesInSection:(NSInteger) section;
+-(ImageInfo*) imageBrower:(LJImageBrowserController*) imageBrowser imageInfoForIndexPath:(NSIndexPath*) indexPath;
+@end
 
-@interface LJImageBrowserController : UICollectionViewController
-
+@interface LJImageBrowserController : UIViewController
+@property (strong, nonatomic) id<LJImageBrowserDataSource> browserDataSource;
+@property (strong, nonatomic) NSIndexPath* initialIndexPath;
 @end

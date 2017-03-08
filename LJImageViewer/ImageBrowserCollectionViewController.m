@@ -7,14 +7,16 @@
 //
 
 #import "ImageBrowserCollectionViewController.h"
+#import "CollectionViewCell.h"
+#import "LJImageBrowserController.h"
 
-@interface ImageBrowserCollectionViewController ()
-
+@interface ImageBrowserCollectionViewController ()<LJImageBrowserDataSource>
+@property (strong, nonatomic) NSMutableArray<UIImage*>* data;
 @end
 
 @implementation ImageBrowserCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"CCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +25,7 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -46,20 +48,18 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return self.data.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    CollectionViewCell *cell = (CollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    cell.image = self.data[indexPath.row];
     
     return cell;
 }
@@ -94,5 +94,38 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    LJImageBrowserController* controller = [[LJImageBrowserController alloc] init];
+    controller.browserDataSource = self;
+    controller.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    controller.providesPresentationContextTransitionStyle = YES;
+    controller.definesPresentationContext = YES;
+    controller.initialIndexPath = indexPath;
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+-(NSMutableArray<UIImage *> *)data{
+    if(!_data){
+        _data = [@[[UIImage imageNamed:@"w4"],[UIImage imageNamed:@"w7"],[UIImage imageNamed:@"w6"]] mutableCopy];
+    }
+    return _data;
+}
+
+#pragma mark LJImageBrowserDataSource
+-(NSInteger)numberOfSectionsInBrowser:(LJImageBrowserController *)controller{
+    return 1;
+}
+
+-(NSInteger)imageBrower:(LJImageBrowserController *)imageBrowser numberOfImagesInSection:(NSInteger)section{
+    return self.data.count;
+}
+
+-(ImageInfo *)imageBrower:(LJImageBrowserController *)imageBrowser imageInfoForIndexPath:(NSIndexPath *)indexPath{
+    ImageInfo* imageInfo = [ImageInfo new];
+    imageInfo.sourceView = [self.collectionView cellForItemAtIndexPath:indexPath];
+    imageInfo.fullResolutionImage = self.data[indexPath.row];
+    return imageInfo;
+}
 
 @end

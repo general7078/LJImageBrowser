@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FullImageCell : UICollectionViewCell
+@property (strong, nonatomic) UIImage* image;
 
+-(void)resetImageScale;
 @end

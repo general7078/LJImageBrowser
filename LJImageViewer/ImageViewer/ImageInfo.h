@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ImageInfo : NSObject
-
+@property (strong, nonatomic) UIView* sourceView;
+@property (strong, nonatomic) UIImage* fullResolutionImage;
+@property (strong, nonatomic) UIImage* thumbnailImage;
 @end
